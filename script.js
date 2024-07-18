@@ -43,3 +43,23 @@ document.querySelector('.search-upload input').addEventListener('input', functio
     });
 });
 
+
+// Example code for handling like button click
+document.querySelectorAll('.like-btn').forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Send AJAX request to like the item
+        // Example: Fetch API or XMLHttpRequest
+    });
+});
+
+
+
+document.querySelectorAll('.gallery-item').forEach(function(item) {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        // Toggle the 'expanded' class on the clicked gallery item
+        item.classList.toggle('expanded');
+    });
+});

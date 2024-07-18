@@ -121,4 +121,29 @@ main {
     color: #D269E6; /* Apply the custom color */
 }
 
+.gallery-item {
+    transition: transform 0.3s ease; /* Smooth transition for expanding */
+    cursor: pointer; /* Change cursor to pointer on hover/click */
+}
+
+.gallery-item.expanded {
+    transform: scale(1.1); /* Scale up the gallery item */
+    z-index: 100; /* Ensure it's above other items */
+}
+
+.gallery-content {
+    position: relative; /* Ensure child elements respect this position */
+}
+
+.bio {
+    display: none; /* Initially hidden */
+    background-color: #fff; /* Example background color */
+    padding: 10px; /* Example padding */
+    margin-top: 10px; /* Example margin */
+    border-radius: 5px; /* Example border radius */
+}
+
+.gallery-item.expanded .bio {
+    display: block; /* Show bio when .expanded class is present */
+}
 
