@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'TT Bluescreen';
+    src: url('fonts/TTBluescreen-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'TT Bluescreen', Arial, sans-serif;
+    background: linear-gradient(90deg, #004aad, #cb6ce6);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #1C172B;
+}
+
+.logo img {
+    height: 80px; /* Adjust the height as needed */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.search-upload {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-upload input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.upload-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: #242364;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info {
+    margin: 10px 0;
+    text-align: center;
+    color: #D269E6; /* Apply the custom color */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.like-btn, .dislike-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.like-btn:hover, .dislike-btn:hover {
+    color: #D269E6; /* Apply the custom color */
+}
+
+.gallery-item {
+    transition: transform 0.3s ease; /* Smooth transition for expanding */
+    cursor: pointer; /* Change cursor to pointer on hover/click */
+}
+
+.gallery-item.expanded {
+    transform: scale(1.1); /* Scale up the gallery item */
+    z-index: 100; /* Ensure it's above other items */
+}
+
+.gallery-content {
+    position: relative; /* Ensure child elements respect this position */
+}
+
+.bio {
+    display: none; /* Initially hidden */
+    background-color: #fff; /* Example background color */
+    padding: 10px; /* Example padding */
+    margin-top: 10px; /* Example margin */
+    border-radius: 5px; /* Example border radius */
+}
+
+.gallery-item.expanded .bio {
+    display: block; /* Show bio when .expanded class is present */
+}
+
+.section-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.section-wrapper > div {
+    background-color: #242364;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.section-wrapper h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-wrapper h2:before,
+.section-wrapper h2:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #D269E6;
+}
+
+.section-wrapper h2:before {
+    margin-right: 10px;
+}
+
+.section-wrapper h2:after {
+    margin-left: 10px;
+}
+
+.pictures-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pictures-grid img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pictures-grid img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .section-wrapper > div {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-wrapper > div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
