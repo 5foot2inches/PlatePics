@@ -1,24 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const likeButtons = document.querySelectorAll('.like-btn');
-    const dislikeButtons = document.querySelectorAll('.dislike-btn');
-    const uploadButton = document.querySelector('.upload-btn');
-
-    likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            console.log('Liked!');
+    document.querySelectorAll('.comment-section form').forEach(form => {
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            const commentInput = event.target.querySelector('input[type="text"]');
+            const commentText = commentInput.value;
+            if (commentText) {
+                const commentDiv = document.createElement('div');
+                commentDiv.textContent = commentText;
+                event.target.parentNode.appendChild(commentDiv);
+                commentInput.value = '';
+            }
         });
     });
 
-    dislikeButtons.forEach(button => {
+    document.querySelectorAll('.like-btn, .dislike-btn').forEach(button => {
         button.addEventListener('click', () => {
-            console.log('Disliked!');
+            // Future functionality for like/dislike count
         });
-    });
-
-    uploadButton.addEventListener('click', () => {
-        console.log('Upload button clicked!');
     });
 });
+
+function showUploadForm() {
+    document.getElementById('uploadFormModal').style.display = 'block';
+}
+
+function closeUploadForm() {
+    document.getElementById('uploadFormModal').style.display = 'none';
+}
+
+document.getElementById('uploadForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Handle the upload form submission
+});
+
 
 // Add an event listener to the search input
 document.querySelector('.search-upload input').addEventListener('input', function() {

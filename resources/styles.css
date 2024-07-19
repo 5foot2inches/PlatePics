@@ -17,16 +17,25 @@ header {
     align-items: center;
     padding: 10px 20px;
     background: #1C172B;
+    height: 100px; /* Fixed height for the header */
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+.logo {
+    flex-shrink: 0; /* Prevents the logo from shrinking */
 }
 
 .logo img {
-    height: 80px; /* Adjust the height as needed */
+    height: 100px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
 }
 
 nav {
+    flex-grow: 1;
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: space-between; /* Space between nav items */
+    margin-left: 20px; /* Adjust if necessary to create space around logo */
 }
 
 nav ul {
@@ -69,8 +78,8 @@ nav ul li a {
 }
 
 .upload-btn img {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
 }
 
 main {
@@ -112,29 +121,78 @@ main {
 .like-btn, .dislike-btn {
     background: none;
     border: none;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     font-size: 20px;
     color: #fff;
 }
 
 .like-btn:hover, .dislike-btn:hover {
-    color: #D269E6; /* Apply the custom color */
+    color: #D269E6;
 }
 
-.gallery-item {
-    transition: transform 0.3s ease; /* Smooth transition for expanding */
-    cursor: pointer; /* Change cursor to pointer on hover/click */
+.comment-section {
+    width: 100%;
+    margin-top: 10px;
 }
 
-.gallery-item.expanded {
-    transform: scale(1.1); /* Scale up the gallery item */
-    z-index: 100; /* Ensure it's above other items */
+.comment-section form {
+    display: flex;
+    justify-content: space-between;
 }
 
-.gallery-content {
-    position: relative; /* Ensure child elements respect this position */
+.comment-section input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
+.comment-section button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #D269E6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #242364;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 .bio {
     display: none; /* Initially hidden */
     background-color: #fff; /* Example background color */
@@ -147,7 +205,7 @@ main {
     display: block; /* Show bio when .expanded class is present */
 }
 
-
+/* locaton.css*/
 #map {
     height: 500px;
     width: 100%;
