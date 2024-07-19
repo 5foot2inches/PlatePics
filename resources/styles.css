@@ -193,6 +193,74 @@ main {
     text-decoration: none;
     cursor: pointer;
 }
+
+.form-container {
+    display: flex;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin-top: 10px;
+}
+
+.details-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details-container ul.preference-list {
+    justify-content: space-between;
+}
+
+.details-container ul.preference-list li {
+    width: calc(33.3333% - 10px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.details-container label,
+.details-container textarea,
+.details-container input,
+.details-container button {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.details-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
 .bio {
     display: none; /* Initially hidden */
     background-color: #fff; /* Example background color */
