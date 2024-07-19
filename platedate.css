@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'TT Bluescreen';
+    src: url('fonts/TTBluescreen-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'TT Bluescreen', Arial, sans-serif;
+    background: linear-gradient(90deg, #004aad, #cb6ce6);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #1C172B;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.search-upload {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-upload input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.upload-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.plate-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-container {
+    background: #1C172B;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2, .form-container p, .form-container h3 {
+    color: #D269E6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group h3 {
+    margin-bottom: 10px;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form ul li {
+    margin: 10px 0;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    background: #D269E6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+preferences {
+    background: #2a2040;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.preferences h1, .preferences h2 {
+    color: #FFD700;
+    margin: 0 0 10px 0;
+}
+
+.preferences h3 {
+    color: #D269E6;
+    margin: 20px 0 10px 0;
+}
+
+.preferences-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.preferences-section label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.preferences-section input[type="checkbox"] {
+    accent-color: #D269E6;
+}
+
+button {
+    background: #D269E6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+
+
+.matches {
+    background: #1C172B;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.matches h2 {
+    color: #D269E6;
+    margin-bottom: 20px;
+}
+
+#match-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.match {
+    background: #2a2040;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.match-info {
+    flex-grow: 1;
+}
+
+.match-info h3 {
+    margin: 0;
+    color: #FFD700;
+}
+
+.match-info p {
+    margin: 5px 0;
+}
+
+.match-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.match-actions button {
+    background: #D269E6;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+

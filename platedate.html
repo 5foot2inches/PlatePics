@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plate Pics - Pictures</title>
-    <link rel="stylesheet" href="./resources/styles.css">
+    <title>Plate Pics - Plate Date</title>
+    <link rel="stylesheet" href="./platedate.css">
 </head>
 <body>
     <header>
@@ -26,17 +26,79 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="top-pictures">
-            <!-- Display top 3 pictures of the week here -->
-        </div>
-        <div class="liked-pictures">
-            <!-- Display liked pictures in order here -->
-        </div>
-        <div class="uploaded-album">
-            <!-- Display all uploaded pictures in an album here -->
-        </div>
+    <main class="plate-date">
+        <section class="form-container">
+            <h2>Plate Date</h2>
+            <p>Meet friends based on Food</p>
+            <form id="preference-form">
+                <div class="form-group">
+                    <h3>Dietary Preferences:</h3>
+                    <ul>
+                        <li><input type="checkbox" name="dietary" value="No Preferences"> No Preferences</li>
+                        <li><input type="checkbox" name="dietary" value="Vegan"> Vegan</li>
+                        <li><input type="checkbox" name="dietary" value="Vegetarian"> Vegetarian</li>
+                        <li><input type="checkbox" name="dietary" value="Keto"> Keto</li>
+                        <li><input type="checkbox" name="dietary" value="Gluten-Free"> Gluten-Free</li>
+                        <li><input type="checkbox" name="dietary" value="Gluten-Intolerant"> Gluten-Intolerant</li>
+                        <li><input type="checkbox" name="dietary" value="Organic"> Organic</li>
+                        <li><input type="checkbox" name="dietary" value="Healthy"> Healthy</li>
+                        <li><input type="checkbox" name="dietary" value="Pescatarian"> Pescatarian</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <h3>Location:</h3>
+                    <ul>
+                        <li><input type="checkbox" name="location" value="Near me"> Near me</li>
+                        <li><input type="checkbox" name="location" value="Within 25 miles"> Within 25 miles</li>
+                        <li><input type="checkbox" name="location" value="Within 50 Miles"> Within 50 Miles</li>
+                        <li><input type="checkbox" name="location" value="Online to share recipes with"> Online to share recipes with</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <h3>Cuisine:</h3>
+                    <ul>
+                        <li><input type="checkbox" name="cuisine" value="American"> American</li>
+                        <li><input type="checkbox" name="cuisine" value="Asian"> Asian</li>
+                        <li><input type="checkbox" name="cuisine" value="Mediterranean"> Mediterranean</li>
+                        <li><input type="checkbox" name="cuisine" value="Italian"> Italian</li>
+                        <li><input type="checkbox" name="cuisine" value="French"> French</li>
+                        <li><input type="checkbox" name="cuisine" value="Vietnamese"> Vietnamese</li>
+                        <li><input type="checkbox" name="cuisine" value="Chinese"> Chinese</li>
+                        <li><input type="checkbox" name="cuisine" value="Comfort Food"> Comfort Food</li>
+                        <li><input type="checkbox" name="cuisine" value="Sushi"> Sushi</li>
+                        <li><input type="checkbox" name="cuisine" value="Korean"> Korean</li>
+                        <li><input type="checkbox" name="cuisine" value="Hawaiian"> Hawaiian</li>
+                        <li><input type="checkbox" name="cuisine" value="Exotic"> Exotic</li>
+                        <li><input type="checkbox" name="cuisine" value="European"> European</li>
+                        <li><input type="checkbox" name="cuisine" value="African"> African</li>
+                        <li><input type="checkbox" name="cuisine" value="Australian"> Australian</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <h3>Personality:</h3>
+                    <ul>
+                        <li><input type="checkbox" name="personality" value="Social"> Social</li>
+                        <li><input type="checkbox" name="personality" value="Shy"> Shy</li>
+                        <li><input type="checkbox" name="personality" value="Talkative"> Talkative</li>
+                        <li><input type="checkbox" name="personality" value="Quiet"> Quiet</li>
+                        <li><input type="checkbox" name="personality" value="Punctual"> Punctual</li>
+                        <li><input type="checkbox" name="personality" value="Runs Late"> Runs Late</li>
+                        <li><input type="checkbox" name="personality" value="Outgoing"> Outgoing</li>
+                        <li><input type="checkbox" name="personality" value="Homebody"> Homebody</li>
+                    </ul>
+                </div>
+                <button type="button" onclick="calculateMatch()">Submit</button>
+            </form>
+        </section>
+        <section class="matches">
+            <h2>Plate Date Pals</h2>
+            <div id="match-results">
+                <!-- Match results will be displayed here -->
+            </div>
+        </section>
     </main>
+    <script src="./platedate.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
