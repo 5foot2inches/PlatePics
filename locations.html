@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plate Pics - Pictures</title>
+    <title>Plate Pics - Locations</title>
     <link rel="stylesheet" href="./resources/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
 </head>
 <body>
     <header>
@@ -27,16 +29,11 @@
         </nav>
     </header>
     <main>
-        <div class="top-pictures">
-            <!-- Display top 3 pictures of the week here -->
-        </div>
-        <div class="liked-pictures">
-            <!-- Display liked pictures in order here -->
-        </div>
-        <div class="uploaded-album">
-            <!-- Display all uploaded pictures in an album here -->
+        <div id="map"></div>
+        <div class="gallery" id="location-gallery">
+            <!-- Images will be populated here based on the map location -->
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="./resources/location.js"></script>
 </body>
 </html>
