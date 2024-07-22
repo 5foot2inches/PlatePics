@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Comment section submission
     document.querySelectorAll('.comment-section form').forEach(form => {
         form.addEventListener('submit', event => {
             event.preventDefault();
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Like and dislike buttons
     document.querySelectorAll('.like-btn, .dislike-btn').forEach(button => {
         button.addEventListener('click', () => {
             // Future functionality for like/dislike count
@@ -27,26 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle the upload form submission
     });
 
-    document.querySelector('.search-upload input').addEventListener('input', function() {
-        var searchText = this.value.toLowerCase();
-        var galleryItems = document.querySelectorAll('.gallery-item');
+    // Search functionality
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const location = document.getElementById('locationInput').value.toLowerCase();
+        const mealType = document.getElementById('mealTypeInput').value.toLowerCase();
+        const user = document.getElementById('userInput').value.toLowerCase();
+
+        const galleryItems = document.querySelectorAll('.gallery-item');
         galleryItems.forEach(function(item) {
-            var tags = item.querySelectorAll('.diet, .location, .meal');
-            var match = Array.from(tags).some(function(tag) {
-                return tag.textContent.toLowerCase().includes(searchText);
-            });
-            if (match) {
+            const itemLocation = item.getAttribute('data-location').toLowerCase();
+            const itemMealType = item.getAttribute('data-meal-type').toLowerCase();
+            const itemUser = item.getAttribute('data-user').toLowerCase();
+
+            const matchesLocation = !location || itemLocation.includes(location);
+            const matchesMealType = !mealType || itemMealType.includes(mealType);
+            const matchesUser = !user || itemUser.includes(user);
+
+            if (matchesLocation && matchesMealType && matchesUser) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';
             }
-        });
-    });
-
-    document.querySelectorAll('.like-btn').forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            // Send AJAX request to like the item
         });
     });
 

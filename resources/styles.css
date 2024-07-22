@@ -170,6 +170,50 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.preference-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 200px;
+  }
+  
+  .column label {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .column input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Adjust the size of the checkbox for better visibility */
+  }
+  
+  @media (max-width: 768px) {
+    .column {
+      min-width: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      min-width: 100px;
+    }
+  }
+  
+
 .modal-content {
     background-color: #242364;
     margin: 15% auto;
@@ -264,6 +308,7 @@ main {
 .checkbox-label input[type="checkbox"] {
     margin-right: 5px;
 }
+
 
 .bio {
     display: none; /* Initially hidden */
