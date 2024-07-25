@@ -126,6 +126,7 @@ main {
     cursor: pointer;
     font-size: 20px;
     color: #fff;
+    margin: 10px;
 }
 
 .like-btn:hover, .dislike-btn:hover {

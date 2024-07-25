@@ -1,3 +1,5 @@
+import VoteCounter from './voting';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Comment section submission
     document.querySelectorAll('.comment-section form').forEach(form => {
