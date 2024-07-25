@@ -1,4 +1,4 @@
-import VoteCounter from './voting';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Comment section submission
